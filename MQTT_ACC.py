@@ -70,23 +70,7 @@ for i in range(0,int(samplecount)):
     vX = vX+X[i]*i
     vY = vY+Y[i]*i
     vH = math.sqrt(vX**2+vY**2)      
-'''      
-    X_angle = math.atan(X[i] / (math.sqrt(Y[i]**2 + Z[i]**2)))
-    Y_angle = math.atan(Y[i] / (math.sqrt(X[i]**2 + Z[i]**2)))
-    Z_angle = math.atan((math.sqrt(X[i]**2 + Y[i]**2)) / Z[i])
-'''
 
-'''
-    Pitch = X_angle * 180 / math.pi
-    Roll = Y_angle * 180 / math.pi
-    Yaw = Z_angle * 180 / math.pi
-'''   
-'''  
-    if ( Pitch >= 45.0 or Roll >= 45.0 or Yaw >= 45.0 ) :
-        tilt.append(1)
-    else :
-        tilt.append(0)
-'''
 fig, ax = plt.subplots(2, 1)
 ax[0].plot(t,X,color="blue", linewidth=1.0, linestyle="-",label="x-acc")
 ax[0].plot(t,Y,color="red", linewidth=1.0, linestyle="-",label="y-acc")
